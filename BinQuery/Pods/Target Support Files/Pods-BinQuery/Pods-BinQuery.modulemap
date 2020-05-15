@@ -1,0 +1,6 @@
+framework module Pods_BinQuery {
+  umbrella header "Pods-BinQuery-umbrella.h"
+
+  export *
+  module * { export * }
+}

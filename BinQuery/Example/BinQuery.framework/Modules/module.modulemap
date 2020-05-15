@@ -1,0 +1,11 @@
+framework module BinQuery {
+  umbrella header "BinQuery.h"
+
+  export *
+  module * { export * }
+}
+
+module BinQuery.Swift {
+    header "BinQuery-Swift.h"
+    requires objc
+}
