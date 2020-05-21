@@ -15,27 +15,31 @@ import CieloOAuth
 
 @objc public class Query: NSObject, CieloBinQueryProtocol {
     private let environment: Environment
-    private let clientId: String
-    private let clientSecret: String
+    private let clientId: String?
+    private let clientSecret: String?
+    private let accessToken: String?
     
     private let authenticateErrorMessage: String = "Não foi possível autenticar."
     private let queryErrorMessage: String = "Não foi possível consultar este cartão."
     
-    let credentialClient: HttpCredentialsClient
+    private var credentialClient: HttpCredentialsClient?
     
-    init(clientId: String, clientSecret: String, environment: Environment = .production) {
+    init(clientId: String? = nil, clientSecret: String? = nil, environment: Environment = .production, accessToken: String? = nil) {
         self.environment = environment
         self.clientId = clientId
         self.clientSecret = clientSecret
+        self.accessToken = accessToken
         
         var oAuthEnv = CieloOAuth.Environment.production
         if environment == .sandbox {
             oAuthEnv = CieloOAuth.Environment.sandbox
         }
         
-        credentialClient = HttpCredentialsClient(clientId: clientId,
-                                                 clientSecret: clientSecret,
-                                                 environment: oAuthEnv)
+        if let hasId = clientId, let hasSecret = clientSecret {
+            credentialClient = HttpCredentialsClient(clientId: hasId,
+                                                     clientSecret: hasSecret,
+                                                     environment: oAuthEnv)
+        }
     }
     
     public static func instance(clientId: String,
@@ -44,8 +48,12 @@ import CieloOAuth
         return Query(clientId: clientId, clientSecret: clientSecret, environment: environment)
     }
     
+    public static func instance(clientId: String, token: String, environment: Environment = .production) -> Query {
+        return Query(clientId: clientId, environment: environment, accessToken: token)
+    }
+    
     private func authenticate(completion: @escaping (String?, String?) -> Void) {
-        credentialClient.getOAuthCredentials {[weak self] (accessToken, error) in
+        credentialClient?.getOAuthCredentials {[weak self] (accessToken, error) in
             guard error == nil else {
                 completion(nil, error)
                 return
@@ -75,7 +83,9 @@ import CieloOAuth
         }
         
         var request = URLRequest(url: url)
-        request.allHTTPHeaderFields = ["Authorization": "Bearer \(accessToken)", "merchantId": clientId]
+        if let clientId = clientId {
+            request.allHTTPHeaderFields = ["Authorization": "Bearer \(accessToken)", "merchantId": clientId]
+        }
         request.httpMethod = "GET"
         
         let task = session.dataTask(with: request, completionHandler: { (result, _, error) in
@@ -117,6 +127,11 @@ import CieloOAuth
     /// \n - bin: 6 primeiros digitos do cartão
     /// \n - accessToken: Token de acesso gerado na autenticação
     public func query(bin: String, completion: @escaping (CieloBinQueryResponse?, String?) -> Void) {
+        guard accessToken == nil else {
+            self.goQuery(bin: bin, accessToken: accessToken!, completion: completion)
+            return
+        }
+        
         authenticate {[weak self] (accessToken, error) in
             guard error == nil else {
                 completion(nil, error)
@@ -128,19 +143,23 @@ import CieloOAuth
                 return
             }
             
-            self?.cardBin(bin: bin, accessToken: token, completion: {[unowned self] (response, error) in
-                guard error == nil else {
-                    completion(nil, error)
-                    return
-                }
-                
-                guard let queryResponse = response else {
-                    completion(nil, self?.queryErrorMessage)
-                    return
-                }
-                
-                completion(queryResponse, nil)
-            })
+            self?.goQuery(bin: bin, accessToken: token, completion: completion)
         }
+    }
+    
+    private func goQuery(bin: String, accessToken: String, completion: @escaping (CieloBinQueryResponse?, String?) -> Void) {
+        cardBin(bin: bin, accessToken: accessToken, completion: {[unowned self] (response, error) in
+            guard error == nil else {
+                completion(nil, error)
+                return
+            }
+            
+            guard let queryResponse = response else {
+                completion(nil, self.queryErrorMessage)
+                return
+            }
+            
+            completion(queryResponse, nil)
+        })
     }
 }

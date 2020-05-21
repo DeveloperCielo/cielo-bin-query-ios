@@ -7,17 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		50841FF8537ADAAD38278B77 /* libPods-BinQuery.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 67EED7BC25A26F5517963B4E /* libPods-BinQuery.a */; };
 		687F206B246D931300EA73D6 /* BinQuery.h in Headers */ = {isa = PBXBuildFile; fileRef = 687F2069246D931300EA73D6 /* BinQuery.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		687F2072246D939800EA73D6 /* Query.swift in Sources */ = {isa = PBXBuildFile; fileRef = 687F2071246D939800EA73D6 /* Query.swift */; };
 		687F2075246D956400EA73D6 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 687F2074246D956400EA73D6 /* Environment.swift */; };
 		687F2077246DC3CD00EA73D6 /* CieloBinQueryResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 687F2076246DC3CD00EA73D6 /* CieloBinQueryResponse.swift */; };
 		687F2079246DCDD400EA73D6 /* AccessToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 687F2078246DCDD400EA73D6 /* AccessToken.swift */; };
-		6ED114C6345CBAA5F3CD8F9F /* Pods_BinQuery.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 417E3A52D908366F5C0E7F5E /* Pods_BinQuery.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0A7D3239820C0C771A265D23 /* Pods-BinQuery.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BinQuery.release.xcconfig"; path = "Target Support Files/Pods-BinQuery/Pods-BinQuery.release.xcconfig"; sourceTree = "<group>"; };
-		417E3A52D908366F5C0E7F5E /* Pods_BinQuery.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BinQuery.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		67EED7BC25A26F5517963B4E /* libPods-BinQuery.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BinQuery.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		687F2066246D931300EA73D6 /* BinQuery.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BinQuery.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		687F2069246D931300EA73D6 /* BinQuery.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BinQuery.h; sourceTree = "<group>"; };
 		687F206A246D931300EA73D6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -33,7 +33,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6ED114C6345CBAA5F3CD8F9F /* Pods_BinQuery.framework in Frameworks */,
+				50841FF8537ADAAD38278B77 /* libPods-BinQuery.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -52,7 +52,7 @@
 		5790D8A4ED05BCBE70010BA9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				417E3A52D908366F5C0E7F5E /* Pods_BinQuery.framework */,
+				67EED7BC25A26F5517963B4E /* libPods-BinQuery.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -344,6 +344,11 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/CieloOAuth\"",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = BinQuery/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -373,6 +378,11 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/CieloOAuth\"",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = BinQuery/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;

@@ -1,4 +1,4 @@
-framework module CieloOAuth {
+module CieloOAuth {
   umbrella header "CieloOAuth-umbrella.h"
 
   export *
