@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "7435EBA5A9D3EF5902844C101A016BEF"
-               BuildableName = "libCieloOAuth.a"
+               BuildableName = "CieloOAuth.framework"
                BlueprintName = "CieloOAuth"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
