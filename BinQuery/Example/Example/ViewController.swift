@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import BinQuery
+import CieloBinQuery
 
 class ViewController: UIViewController {
     
@@ -17,6 +17,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var txtClientId: UITextField!
     @IBOutlet weak var txtClientSecret: UITextField!
     @IBOutlet weak var txtToken: UITextField!
+    @IBOutlet weak var txtCard: UITextField!
     @IBOutlet weak var btnQuery: UIButton!
 
     override func viewDidLoad() {
@@ -26,20 +27,38 @@ class ViewController: UIViewController {
         
         txtClientId.text = "dba3a8db-fa54-40e0-8bab-7bfb9b6f2e2e"
         txtClientSecret.text = "D/ilRsfoqHlSUChwAMnlyKdDNd7FMsM7cU/vo02REag="
+        txtCard.text = "501010"
         
-        query = Query.instance(clientId: "", clientSecret: "")
+        query = Query.instance(clientId: txtClientId.text!, clientSecret: txtClientSecret.text!, environment: .sandbox)
     }
 
     @objc func queryCard(_ sender: UIButton) {
-        query?.query(bin: "", completion: {[weak self] (response, error) in
-            do {
-                let jsonData = try JSONEncoder().encode(response)
-                let json = String(data: jsonData, encoding: .utf8)
+        self.view.endEditing(true)
+        self.textView.text = ""
+        
+        guard let cardbin = txtCard.text, cardbin.count > 5 else {
+            self.textView.text = "Informe os 6 primeiros dígitos do cartão a ser consultado."
+            return
+        }
+        
+        query?.query(bin: cardbin, completion: {[weak self] (response, error) in
+            DispatchQueue.main.async {
+                guard error == nil else {
+                    self?.textView.text = error
+                    return
+                }
                 
-                self?.textView.text = json
-                
-            } catch let ex {
-                debugPrint(ex.localizedDescription)
+                do {
+                    let jsonData = try JSONEncoder().encode(response)
+                    let json = String(data: jsonData, encoding: .utf8)
+                    
+                    
+                    self?.textView.text = json
+                    
+                    
+                } catch let ex {
+                    self?.textView.text = ex.localizedDescription
+                }
             }
         })
     }
