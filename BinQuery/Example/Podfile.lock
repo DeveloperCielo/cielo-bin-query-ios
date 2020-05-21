@@ -1,0 +1,20 @@
+PODS:
+  - CieloBinQuery (0.0.1):
+    - CieloOAuth
+  - CieloOAuth (1.0.6)
+
+DEPENDENCIES:
+  - CieloBinQuery
+
+SPEC REPOS:
+  trunk:
+    - CieloBinQuery
+    - CieloOAuth
+
+SPEC CHECKSUMS:
+  CieloBinQuery: 8b6f4c4e6bfde6045ff0ca2401ef953607575a55
+  CieloOAuth: 49dea63c3bbb70c5de2828812fc4ae502ea5f613
+
+PODFILE CHECKSUM: d93c6e6b19dec4e45290f71348e33fa32339607a
+
+COCOAPODS: 1.9.1

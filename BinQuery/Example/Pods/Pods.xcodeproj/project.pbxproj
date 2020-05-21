@@ -1,0 +1,847 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		01B7191D18588DBA3FD4E807AFF750EC /* CieloOAuth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CED5B42B9CA663842C7415FF29D676F9 /* CieloOAuth.framework */; };
+		27DF477F689AEDF351CDFFE9AE8C284A /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60E87B5E08F011DB84857C5836DE3172 /* Environment.swift */; };
+		2C1EE3B2A4A802C1CDAAD5C103F03672 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA64FC497C96DB780A9965EDE9A82421 /* Foundation.framework */; };
+		2D312E7F0A7C27910E35A5D50FDB8A22 /* CieloOAuth.h in Headers */ = {isa = PBXBuildFile; fileRef = 60FC517FD209199C3B6290053F335B8F /* CieloOAuth.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2FAA87031C58B22A5A4DD211E2BD2EE7 /* Pods-Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D6D7C498FA339E02BD53ECB8916CEA8E /* Pods-Example-dummy.m */; };
+		4DBE26F1B445CEE6578C45C92A3DAFF9 /* Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306B80ED308FA74AC609AD0951FEF59D /* Api.swift */; };
+		4E5ABEA892F9BEF83D2DE749CFA535A0 /* AccessToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 294ABF81547EDA482B25334B01F9281E /* AccessToken.swift */; };
+		577CDB4398BCEE27896ECB65F8EF76DC /* AuthClientModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46C398EBAE0184ECA2064F14951F1BBF /* AuthClientModel.swift */; };
+		61AA8C1C8D28B1CA3FB7C7E05ED66E14 /* Pods-Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 7825A90E082A1582EB16256B0E722B3F /* Pods-Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6AAEAC503D9AE82E045732DA7F8BD694 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3859A3F3FE69B4E9C6DB598730106AEC /* Environment.swift */; };
+		76836ECB75DBBF5DB44F412D1746DE3E /* Query.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA9A5022E3781E7089A1D1CB7BC83D6 /* Query.swift */; };
+		77B3EB95A2BCDC00EF2DD07169941324 /* AccessToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95AACBACFEF603591F62F2C6AE83B6B6 /* AccessToken.swift */; };
+		9D23839598EA3C0D890E5BCBCBF58793 /* CieloBinQuery-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 671C551FEF16480AD5C763C32672BB17 /* CieloBinQuery-dummy.m */; };
+		A263F01F7603ADBBB8EF4D67AEDEA14B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA64FC497C96DB780A9965EDE9A82421 /* Foundation.framework */; };
+		A71574A97099F20B7B82B4D31B8A64F7 /* CieloOAuth-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F11177B38E278864E2D9859A4B1A5CF0 /* CieloOAuth-dummy.m */; };
+		C45D5C6DF2853E5D08251A70DA6150CC /* HttpCredentialsClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 256C7979232367EDA70A07E740F8AB83 /* HttpCredentialsClient.swift */; };
+		CC804A492B011A6C86BC780860D10EB5 /* CieloBinQueryResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BB8261A31D164F1770BD175DBF8FF81 /* CieloBinQueryResponse.swift */; };
+		E0EDC8C6EE696DA94B95F2EB952534CD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA64FC497C96DB780A9965EDE9A82421 /* Foundation.framework */; };
+		E26B2C44FA668342B5D438EE52FDE676 /* DecodableExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA566027DC7F49D0FFD14F7B50F1EA5C /* DecodableExtension.swift */; };
+		EF005E96978FFE984E4AF5899FF0D819 /* BinQuery.h in Headers */ = {isa = PBXBuildFile; fileRef = A57AE3AFA17530705AADB1DAC2686C40 /* BinQuery.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FEB0BE7D80609868126F52128CD3D09C /* CieloBinQuery-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 488BC1A34D371FEEA958A285EB991760 /* CieloBinQuery-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FF8C9402FF75767DAC343545715BAAD0 /* CieloOAuth-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 82B6B69847C74E71CB2E37AAC33F22A7 /* CieloOAuth-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2A5CF8233705F32F6E88D0114583CE7C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7435EBA5A9D3EF5902844C101A016BEF;
+			remoteInfo = CieloOAuth;
+		};
+		886269FF230D3F2B192F7E4BA9575C8A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4403FD15AA401C9D55494F0D43E4BFB7;
+			remoteInfo = CieloBinQuery;
+		};
+		8C5D51B32007FF02DD084AADBD6511D4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7435EBA5A9D3EF5902844C101A016BEF;
+			remoteInfo = CieloOAuth;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0A0DC6B6FEB0335DE44523D2ECF4E20A /* CieloOAuth-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CieloOAuth-prefix.pch"; sourceTree = "<group>"; };
+		0BA9A5022E3781E7089A1D1CB7BC83D6 /* Query.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Query.swift; path = BinQuery/BinQuery/Query.swift; sourceTree = "<group>"; };
+		1F667CC0E19EAF34E5A4119E2121F585 /* Pods_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Example.framework; path = "Pods-Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		243410B9535472556EA4BB6DBC133A0D /* Pods-Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Example.release.xcconfig"; sourceTree = "<group>"; };
+		256C7979232367EDA70A07E740F8AB83 /* HttpCredentialsClient.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HttpCredentialsClient.swift; path = CieloOAuth/CieloOAuth/HttpCredentialsClient.swift; sourceTree = "<group>"; };
+		294ABF81547EDA482B25334B01F9281E /* AccessToken.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AccessToken.swift; path = CieloOAuth/CieloOAuth/Models/AccessToken.swift; sourceTree = "<group>"; };
+		29D8560C7BC00E5D2EE6C662B8917283 /* CieloBinQuery.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = CieloBinQuery.modulemap; sourceTree = "<group>"; };
+		2E783B9BC6E11D0199F6B16CB46FCAC9 /* CieloOAuth.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CieloOAuth.debug.xcconfig; sourceTree = "<group>"; };
+		306B80ED308FA74AC609AD0951FEF59D /* Api.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Api.swift; path = CieloOAuth/CieloOAuth/Networking/Api.swift; sourceTree = "<group>"; };
+		31C1D37707DFAA5E6A164BCC07834264 /* Pods-Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Example-Info.plist"; sourceTree = "<group>"; };
+		338D29A9AC895BEA4F52AFD84FE12499 /* CieloOAuth.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CieloOAuth.release.xcconfig; sourceTree = "<group>"; };
+		3391AB5F4A1A12949B53CC8774D20F6F /* CieloBinQuery.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CieloBinQuery.release.xcconfig; sourceTree = "<group>"; };
+		35C305D3797C284E6F5BAA1D3E6F9BF8 /* Pods-Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Example.modulemap"; sourceTree = "<group>"; };
+		3859A3F3FE69B4E9C6DB598730106AEC /* Environment.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Environment.swift; path = CieloOAuth/CieloOAuth/Models/Environment.swift; sourceTree = "<group>"; };
+		3BF68652600D7FA22E0852D1ED4A1706 /* CieloBinQuery-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CieloBinQuery-prefix.pch"; sourceTree = "<group>"; };
+		441854E35F81731E63E53DC7E4EEAD9D /* Pods-Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Example-acknowledgements.markdown"; sourceTree = "<group>"; };
+		46C398EBAE0184ECA2064F14951F1BBF /* AuthClientModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AuthClientModel.swift; path = CieloOAuth/CieloOAuth/Models/AuthClientModel.swift; sourceTree = "<group>"; };
+		488BC1A34D371FEEA958A285EB991760 /* CieloBinQuery-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CieloBinQuery-umbrella.h"; sourceTree = "<group>"; };
+		59D7888B48976A63EAC48669FAD1C4AF /* CieloOAuth.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = CieloOAuth.modulemap; sourceTree = "<group>"; };
+		60E87B5E08F011DB84857C5836DE3172 /* Environment.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Environment.swift; path = BinQuery/BinQuery/Domain/Environment.swift; sourceTree = "<group>"; };
+		60FC517FD209199C3B6290053F335B8F /* CieloOAuth.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CieloOAuth.h; path = CieloOAuth/CieloOAuth/CieloOAuth.h; sourceTree = "<group>"; };
+		6647440AB13EAEDB4CC9EC12351BDCC6 /* CieloOAuth.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = CieloOAuth.framework; path = CieloOAuth.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		671C551FEF16480AD5C763C32672BB17 /* CieloBinQuery-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "CieloBinQuery-dummy.m"; sourceTree = "<group>"; };
+		7825A90E082A1582EB16256B0E722B3F /* Pods-Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Example-umbrella.h"; sourceTree = "<group>"; };
+		82B6B69847C74E71CB2E37AAC33F22A7 /* CieloOAuth-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CieloOAuth-umbrella.h"; sourceTree = "<group>"; };
+		95AACBACFEF603591F62F2C6AE83B6B6 /* AccessToken.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AccessToken.swift; path = BinQuery/BinQuery/Domain/AccessToken.swift; sourceTree = "<group>"; };
+		9BB8261A31D164F1770BD175DBF8FF81 /* CieloBinQueryResponse.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CieloBinQueryResponse.swift; path = BinQuery/BinQuery/Domain/CieloBinQueryResponse.swift; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A1CCFF965A404F981D9B9565D42A78D9 /* CieloBinQuery-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "CieloBinQuery-Info.plist"; sourceTree = "<group>"; };
+		A57AE3AFA17530705AADB1DAC2686C40 /* BinQuery.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BinQuery.h; path = BinQuery/BinQuery/BinQuery.h; sourceTree = "<group>"; };
+		AFECBC24E09D0D25F822C27BD944AFD4 /* Pods-Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Example-frameworks.sh"; sourceTree = "<group>"; };
+		B45138496B85A072654D1D0F8EBBEDE5 /* Pods-Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Example.debug.xcconfig"; sourceTree = "<group>"; };
+		B7EA36C231FD4097CCE924E8BDA82F98 /* CieloBinQuery.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = CieloBinQuery.framework; path = CieloBinQuery.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CED5B42B9CA663842C7415FF29D676F9 /* CieloOAuth.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CieloOAuth.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D6D7C498FA339E02BD53ECB8916CEA8E /* Pods-Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Example-dummy.m"; sourceTree = "<group>"; };
+		EA21B344259B58996DB73382B1B1521F /* Pods-Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Example-acknowledgements.plist"; sourceTree = "<group>"; };
+		EA566027DC7F49D0FFD14F7B50F1EA5C /* DecodableExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DecodableExtension.swift; path = CieloOAuth/CieloOAuth/Extensions/DecodableExtension.swift; sourceTree = "<group>"; };
+		EA64FC497C96DB780A9965EDE9A82421 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		F11177B38E278864E2D9859A4B1A5CF0 /* CieloOAuth-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "CieloOAuth-dummy.m"; sourceTree = "<group>"; };
+		F6E108BBF0236421172493B22CF752B5 /* CieloBinQuery.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CieloBinQuery.debug.xcconfig; sourceTree = "<group>"; };
+		FF2E8C9BF22E8EC4DA21769BB928BA2E /* CieloOAuth-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "CieloOAuth-Info.plist"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		38A675FD37D0AFE000014D1187FC188E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2C1EE3B2A4A802C1CDAAD5C103F03672 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C09A15B9B11A381200529A1A36E60257 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				01B7191D18588DBA3FD4E807AFF750EC /* CieloOAuth.framework in Frameworks */,
+				E0EDC8C6EE696DA94B95F2EB952534CD /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CBFAA322A9E6124D0C3961C2743BC291 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A263F01F7603ADBBB8EF4D67AEDEA14B /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		39A811B54826BBB37B6D9043B0276F9E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CED5B42B9CA663842C7415FF29D676F9 /* CieloOAuth.framework */,
+				6E939657851C280080EA5CA8C228D7B4 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		432039994343493A54578A9073D65451 /* CieloBinQuery */ = {
+			isa = PBXGroup;
+			children = (
+				95AACBACFEF603591F62F2C6AE83B6B6 /* AccessToken.swift */,
+				A57AE3AFA17530705AADB1DAC2686C40 /* BinQuery.h */,
+				9BB8261A31D164F1770BD175DBF8FF81 /* CieloBinQueryResponse.swift */,
+				60E87B5E08F011DB84857C5836DE3172 /* Environment.swift */,
+				0BA9A5022E3781E7089A1D1CB7BC83D6 /* Query.swift */,
+				A692394CE42DE6A053B8AED3054B1732 /* Support Files */,
+			);
+			name = CieloBinQuery;
+			path = CieloBinQuery;
+			sourceTree = "<group>";
+		};
+		6E939657851C280080EA5CA8C228D7B4 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				EA64FC497C96DB780A9965EDE9A82421 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		9BDBD95ED116334D1B2835202D8D3060 /* Pods-Example */ = {
+			isa = PBXGroup;
+			children = (
+				35C305D3797C284E6F5BAA1D3E6F9BF8 /* Pods-Example.modulemap */,
+				441854E35F81731E63E53DC7E4EEAD9D /* Pods-Example-acknowledgements.markdown */,
+				EA21B344259B58996DB73382B1B1521F /* Pods-Example-acknowledgements.plist */,
+				D6D7C498FA339E02BD53ECB8916CEA8E /* Pods-Example-dummy.m */,
+				AFECBC24E09D0D25F822C27BD944AFD4 /* Pods-Example-frameworks.sh */,
+				31C1D37707DFAA5E6A164BCC07834264 /* Pods-Example-Info.plist */,
+				7825A90E082A1582EB16256B0E722B3F /* Pods-Example-umbrella.h */,
+				B45138496B85A072654D1D0F8EBBEDE5 /* Pods-Example.debug.xcconfig */,
+				243410B9535472556EA4BB6DBC133A0D /* Pods-Example.release.xcconfig */,
+			);
+			name = "Pods-Example";
+			path = "Target Support Files/Pods-Example";
+			sourceTree = "<group>";
+		};
+		A692394CE42DE6A053B8AED3054B1732 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				29D8560C7BC00E5D2EE6C662B8917283 /* CieloBinQuery.modulemap */,
+				671C551FEF16480AD5C763C32672BB17 /* CieloBinQuery-dummy.m */,
+				A1CCFF965A404F981D9B9565D42A78D9 /* CieloBinQuery-Info.plist */,
+				3BF68652600D7FA22E0852D1ED4A1706 /* CieloBinQuery-prefix.pch */,
+				488BC1A34D371FEEA958A285EB991760 /* CieloBinQuery-umbrella.h */,
+				F6E108BBF0236421172493B22CF752B5 /* CieloBinQuery.debug.xcconfig */,
+				3391AB5F4A1A12949B53CC8774D20F6F /* CieloBinQuery.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/CieloBinQuery";
+			sourceTree = "<group>";
+		};
+		ADC6498341F1C7410C3EBF0EAA4333B4 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				59D7888B48976A63EAC48669FAD1C4AF /* CieloOAuth.modulemap */,
+				F11177B38E278864E2D9859A4B1A5CF0 /* CieloOAuth-dummy.m */,
+				FF2E8C9BF22E8EC4DA21769BB928BA2E /* CieloOAuth-Info.plist */,
+				0A0DC6B6FEB0335DE44523D2ECF4E20A /* CieloOAuth-prefix.pch */,
+				82B6B69847C74E71CB2E37AAC33F22A7 /* CieloOAuth-umbrella.h */,
+				2E783B9BC6E11D0199F6B16CB46FCAC9 /* CieloOAuth.debug.xcconfig */,
+				338D29A9AC895BEA4F52AFD84FE12499 /* CieloOAuth.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/CieloOAuth";
+			sourceTree = "<group>";
+		};
+		CE2E825F08D3AD0FD76E6D78D7512ED0 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				9BDBD95ED116334D1B2835202D8D3060 /* Pods-Example */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		CF1408CF629C7361332E53B88F7BD30C = {
+			isa = PBXGroup;
+			children = (
+				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
+				39A811B54826BBB37B6D9043B0276F9E /* Frameworks */,
+				DD59C55887864C747F90BC7AFC452432 /* Pods */,
+				F180B5E69011D108C3BC5EFB3CE8E139 /* Products */,
+				CE2E825F08D3AD0FD76E6D78D7512ED0 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		DD59C55887864C747F90BC7AFC452432 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				432039994343493A54578A9073D65451 /* CieloBinQuery */,
+				EC032A0EFEF31BD408A22BF92E8C4600 /* CieloOAuth */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		EC032A0EFEF31BD408A22BF92E8C4600 /* CieloOAuth */ = {
+			isa = PBXGroup;
+			children = (
+				294ABF81547EDA482B25334B01F9281E /* AccessToken.swift */,
+				306B80ED308FA74AC609AD0951FEF59D /* Api.swift */,
+				46C398EBAE0184ECA2064F14951F1BBF /* AuthClientModel.swift */,
+				60FC517FD209199C3B6290053F335B8F /* CieloOAuth.h */,
+				EA566027DC7F49D0FFD14F7B50F1EA5C /* DecodableExtension.swift */,
+				3859A3F3FE69B4E9C6DB598730106AEC /* Environment.swift */,
+				256C7979232367EDA70A07E740F8AB83 /* HttpCredentialsClient.swift */,
+				ADC6498341F1C7410C3EBF0EAA4333B4 /* Support Files */,
+			);
+			name = CieloOAuth;
+			path = CieloOAuth;
+			sourceTree = "<group>";
+		};
+		F180B5E69011D108C3BC5EFB3CE8E139 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B7EA36C231FD4097CCE924E8BDA82F98 /* CieloBinQuery.framework */,
+				6647440AB13EAEDB4CC9EC12351BDCC6 /* CieloOAuth.framework */,
+				1F667CC0E19EAF34E5A4119E2121F585 /* Pods_Example.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		17B5C81AF47CBFB5C6E99C6499DA1595 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				61AA8C1C8D28B1CA3FB7C7E05ED66E14 /* Pods-Example-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2507CF1C23ABB21A711098F7B26DA7B0 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF005E96978FFE984E4AF5899FF0D819 /* BinQuery.h in Headers */,
+				FEB0BE7D80609868126F52128CD3D09C /* CieloBinQuery-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		74B444C5028A1245A76C31C4AF79996E /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FF8C9402FF75767DAC343545715BAAD0 /* CieloOAuth-umbrella.h in Headers */,
+				2D312E7F0A7C27910E35A5D50FDB8A22 /* CieloOAuth.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		0AEE99A309977BD12A049FF48AF9BA4B /* Pods-Example */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FF7DBBB1DB862C8BD031CC41888E4B80 /* Build configuration list for PBXNativeTarget "Pods-Example" */;
+			buildPhases = (
+				17B5C81AF47CBFB5C6E99C6499DA1595 /* Headers */,
+				EEE02378CFD0C0C53C1210C32AFA830A /* Sources */,
+				CBFAA322A9E6124D0C3961C2743BC291 /* Frameworks */,
+				FFE4B9C59BEFCE9B53B83BD380958880 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FBAEC20244BC19FAB00F57249C493596 /* PBXTargetDependency */,
+				2C5F7B1D1E07D4235BB281E8F388EC01 /* PBXTargetDependency */,
+			);
+			name = "Pods-Example";
+			productName = "Pods-Example";
+			productReference = 1F667CC0E19EAF34E5A4119E2121F585 /* Pods_Example.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		4403FD15AA401C9D55494F0D43E4BFB7 /* CieloBinQuery */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A7A3CD51BB24B0E676DAD882B0EF6AAC /* Build configuration list for PBXNativeTarget "CieloBinQuery" */;
+			buildPhases = (
+				2507CF1C23ABB21A711098F7B26DA7B0 /* Headers */,
+				8E4D891971AFF4D2F075A5715A9216CA /* Sources */,
+				C09A15B9B11A381200529A1A36E60257 /* Frameworks */,
+				CDE6316EDFD218DD11DEC6CB8B209508 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6067CD3DA9FB525A362EF171A451790E /* PBXTargetDependency */,
+			);
+			name = CieloBinQuery;
+			productName = CieloBinQuery;
+			productReference = B7EA36C231FD4097CCE924E8BDA82F98 /* CieloBinQuery.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		7435EBA5A9D3EF5902844C101A016BEF /* CieloOAuth */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DFF1146E95FCB9BC4BC7F1C125218B23 /* Build configuration list for PBXNativeTarget "CieloOAuth" */;
+			buildPhases = (
+				74B444C5028A1245A76C31C4AF79996E /* Headers */,
+				4F7E6B75A902BF9C19A68811412E0D6D /* Sources */,
+				38A675FD37D0AFE000014D1187FC188E /* Frameworks */,
+				6680FC2F3FEA3E79483F909F1EEE7FD6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CieloOAuth;
+			productName = CieloOAuth;
+			productReference = 6647440AB13EAEDB4CC9EC12351BDCC6 /* CieloOAuth.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1100;
+				LastUpgradeCheck = 1100;
+			};
+			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			productRefGroup = F180B5E69011D108C3BC5EFB3CE8E139 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4403FD15AA401C9D55494F0D43E4BFB7 /* CieloBinQuery */,
+				7435EBA5A9D3EF5902844C101A016BEF /* CieloOAuth */,
+				0AEE99A309977BD12A049FF48AF9BA4B /* Pods-Example */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		6680FC2F3FEA3E79483F909F1EEE7FD6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CDE6316EDFD218DD11DEC6CB8B209508 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FFE4B9C59BEFCE9B53B83BD380958880 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4F7E6B75A902BF9C19A68811412E0D6D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4E5ABEA892F9BEF83D2DE749CFA535A0 /* AccessToken.swift in Sources */,
+				4DBE26F1B445CEE6578C45C92A3DAFF9 /* Api.swift in Sources */,
+				577CDB4398BCEE27896ECB65F8EF76DC /* AuthClientModel.swift in Sources */,
+				A71574A97099F20B7B82B4D31B8A64F7 /* CieloOAuth-dummy.m in Sources */,
+				E26B2C44FA668342B5D438EE52FDE676 /* DecodableExtension.swift in Sources */,
+				6AAEAC503D9AE82E045732DA7F8BD694 /* Environment.swift in Sources */,
+				C45D5C6DF2853E5D08251A70DA6150CC /* HttpCredentialsClient.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8E4D891971AFF4D2F075A5715A9216CA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				77B3EB95A2BCDC00EF2DD07169941324 /* AccessToken.swift in Sources */,
+				9D23839598EA3C0D890E5BCBCBF58793 /* CieloBinQuery-dummy.m in Sources */,
+				CC804A492B011A6C86BC780860D10EB5 /* CieloBinQueryResponse.swift in Sources */,
+				27DF477F689AEDF351CDFFE9AE8C284A /* Environment.swift in Sources */,
+				76836ECB75DBBF5DB44F412D1746DE3E /* Query.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EEE02378CFD0C0C53C1210C32AFA830A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2FAA87031C58B22A5A4DD211E2BD2EE7 /* Pods-Example-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2C5F7B1D1E07D4235BB281E8F388EC01 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = CieloOAuth;
+			target = 7435EBA5A9D3EF5902844C101A016BEF /* CieloOAuth */;
+			targetProxy = 2A5CF8233705F32F6E88D0114583CE7C /* PBXContainerItemProxy */;
+		};
+		6067CD3DA9FB525A362EF171A451790E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = CieloOAuth;
+			target = 7435EBA5A9D3EF5902844C101A016BEF /* CieloOAuth */;
+			targetProxy = 8C5D51B32007FF02DD084AADBD6511D4 /* PBXContainerItemProxy */;
+		};
+		FBAEC20244BC19FAB00F57249C493596 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = CieloBinQuery;
+			target = 4403FD15AA401C9D55494F0D43E4BFB7 /* CieloBinQuery */;
+			targetProxy = 886269FF230D3F2B192F7E4BA9575C8A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		2569F05BA2EFA8E6E635FE12458446CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3391AB5F4A1A12949B53CC8774D20F6F /* CieloBinQuery.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/CieloBinQuery/CieloBinQuery-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/CieloBinQuery/CieloBinQuery-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/CieloBinQuery/CieloBinQuery.modulemap";
+				PRODUCT_MODULE_NAME = CieloBinQuery;
+				PRODUCT_NAME = CieloBinQuery;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		4909CEC95952E341F516345F0A8C12BE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B45138496B85A072654D1D0F8EBBEDE5 /* Pods-Example.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-Example/Pods-Example-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Example/Pods-Example.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		620F8A6A96223A7B6B5AB7A109CA2C7C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2E783B9BC6E11D0199F6B16CB46FCAC9 /* CieloOAuth.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/CieloOAuth/CieloOAuth-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/CieloOAuth/CieloOAuth-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/CieloOAuth/CieloOAuth.modulemap";
+				PRODUCT_MODULE_NAME = CieloOAuth;
+				PRODUCT_NAME = CieloOAuth;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		8F17DC3A99F99FBAD606CE6963886315 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		916E0404255105F480DC4950B7625F7A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		BD6E0741AB4A6F4C0BA46C9D0FA94E7C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F6E108BBF0236421172493B22CF752B5 /* CieloBinQuery.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/CieloBinQuery/CieloBinQuery-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/CieloBinQuery/CieloBinQuery-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/CieloBinQuery/CieloBinQuery.modulemap";
+				PRODUCT_MODULE_NAME = CieloBinQuery;
+				PRODUCT_NAME = CieloBinQuery;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		EA5FAC7F7E28C0C90837A56E9F3AD444 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 243410B9535472556EA4BB6DBC133A0D /* Pods-Example.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-Example/Pods-Example-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Example/Pods-Example.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		FBBE83DDCD5C2CFD7B41BFBB0663D737 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 338D29A9AC895BEA4F52AFD84FE12499 /* CieloOAuth.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/CieloOAuth/CieloOAuth-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/CieloOAuth/CieloOAuth-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/CieloOAuth/CieloOAuth.modulemap";
+				PRODUCT_MODULE_NAME = CieloOAuth;
+				PRODUCT_NAME = CieloOAuth;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				916E0404255105F480DC4950B7625F7A /* Debug */,
+				8F17DC3A99F99FBAD606CE6963886315 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A7A3CD51BB24B0E676DAD882B0EF6AAC /* Build configuration list for PBXNativeTarget "CieloBinQuery" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BD6E0741AB4A6F4C0BA46C9D0FA94E7C /* Debug */,
+				2569F05BA2EFA8E6E635FE12458446CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DFF1146E95FCB9BC4BC7F1C125218B23 /* Build configuration list for PBXNativeTarget "CieloOAuth" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				620F8A6A96223A7B6B5AB7A109CA2C7C /* Debug */,
+				FBBE83DDCD5C2CFD7B41BFBB0663D737 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FF7DBBB1DB862C8BD031CC41888E4B80 /* Build configuration list for PBXNativeTarget "Pods-Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4909CEC95952E341F516345F0A8C12BE /* Debug */,
+				EA5FAC7F7E28C0C90837A56E9F3AD444 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+}

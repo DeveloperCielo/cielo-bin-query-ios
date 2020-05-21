@@ -356,6 +356,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
+					"$(PROJECT_DIR)",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.jnazario.BinQuery;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
@@ -390,6 +391,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
+					"$(PROJECT_DIR)",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.jnazario.BinQuery;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
