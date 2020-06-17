@@ -1,7 +1,7 @@
 Pod::Spec.new do |spec|
 
-  spec.name         = "Braspag3Ds"
-  spec.version      = "0.0.1"
+  spec.name         = "CieloBinQuery"
+  spec.version      = "0.0.2"
   spec.summary      = "Biblioteca de consulta de cartões de crédito"
 
   spec.description  = <<-DESC
@@ -27,6 +27,6 @@ Pod::Spec.new do |spec|
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   spec.source_files  = "BinQuery/BinQuery/**/*.{h,m,swift,framework}"
-  spec.vendored_frameworks = 'BinQuery/Pods/**/*.*'
-  spec.exclude_files = "BinQuery/Example/*.*"
+  spec.dependency 'CieloOAuth'
+  spec.exclude_files = "BinQuery/Example/**/*.*"
 end

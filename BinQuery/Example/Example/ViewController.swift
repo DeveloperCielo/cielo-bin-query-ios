@@ -14,6 +14,7 @@ class ViewController: UIViewController {
     var query: Query?
     
     @IBOutlet weak var textView: UITextView!
+    @IBOutlet weak var txtMerchantId: UITextField!
     @IBOutlet weak var txtClientId: UITextField!
     @IBOutlet weak var txtClientSecret: UITextField!
     @IBOutlet weak var txtToken: UITextField!
@@ -25,8 +26,9 @@ class ViewController: UIViewController {
         
         btnQuery.addTarget(self, action: #selector(queryCard), for: .touchUpInside)
         
-        txtClientId.text = "dba3a8db-fa54-40e0-8bab-7bfb9b6f2e2e"
-        txtClientSecret.text = "D/ilRsfoqHlSUChwAMnlyKdDNd7FMsM7cU/vo02REag="
+        txtMerchantId.text = "A0BE879C-D2C1-486B-BA0A-04B6D4D7028E"
+        txtClientId.text = "2494d738-a82e-496e-8adc-5e0265b5dcec"
+        txtClientSecret.text = "Rqat2ohHS9FQbXwuXKk9Pksm1ICb9N2pvzh7WD6Yarw="
         txtCard.text = "501010"
         
         query = Query.instance(clientId: txtClientId.text!, clientSecret: txtClientSecret.text!, environment: .sandbox)
