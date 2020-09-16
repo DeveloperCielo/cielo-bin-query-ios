@@ -31,7 +31,10 @@ class ViewController: UIViewController {
         txtClientSecret.text = "Rqat2ohHS9FQbXwuXKk9Pksm1ICb9N2pvzh7WD6Yarw="
         txtCard.text = "501010"
         
-        query = Query.instance(clientId: txtClientId.text!, clientSecret: txtClientSecret.text!, environment: .sandbox)
+        query = Query.instance(merchantId: txtMerchantId.text!,
+                               clientId: txtClientId.text!,
+                               clientSecret: txtClientSecret.text!,
+                               environment: .sandbox)
     }
 
     @objc func queryCard(_ sender: UIButton) {

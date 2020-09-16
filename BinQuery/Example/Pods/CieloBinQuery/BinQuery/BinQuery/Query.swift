@@ -18,17 +18,19 @@ import CieloOAuth
     private let clientId: String?
     private let clientSecret: String?
     private let accessToken: String?
+    private let merchantId: String?
     
     private let authenticateErrorMessage: String = "Não foi possível autenticar."
     private let queryErrorMessage: String = "Não foi possível consultar este cartão."
     
     private var credentialClient: HttpCredentialsClient?
     
-    init(clientId: String? = nil, clientSecret: String? = nil, environment: Environment = .production, accessToken: String? = nil) {
+    init(merchantId: String?, clientId: String? = nil, clientSecret: String? = nil, environment: Environment = .production, accessToken: String? = nil) {
         self.environment = environment
         self.clientId = clientId
         self.clientSecret = clientSecret
         self.accessToken = accessToken
+        self.merchantId = merchantId
         
         var oAuthEnv = CieloOAuth.Environment.production
         if environment == .sandbox {
@@ -42,14 +44,18 @@ import CieloOAuth
         }
     }
     
-    public static func instance(clientId: String,
+    public static func instance(merchantId: String,
+                                clientId: String,
                                 clientSecret: String,
                                 environment: Environment = .production) -> Query {
-        return Query(clientId: clientId, clientSecret: clientSecret, environment: environment)
+        return Query(merchantId: merchantId, clientId: clientId, clientSecret: clientSecret, environment: environment)
     }
     
-    public static func instance(clientId: String, token: String, environment: Environment = .production) -> Query {
-        return Query(clientId: clientId, environment: environment, accessToken: token)
+    public static func instance(merchantId: String,
+                                clientId: String,
+                                token: String,
+                                environment: Environment = .production) -> Query {
+        return Query(merchantId: merchantId, clientId: clientId, environment: environment, accessToken: token)
     }
     
     private func authenticate(completion: @escaping (String?, String?) -> Void) {
@@ -83,8 +89,8 @@ import CieloOAuth
         }
         
         var request = URLRequest(url: url)
-        if let clientId = clientId {
-            request.allHTTPHeaderFields = ["Authorization": "Bearer \(accessToken)", "merchantId": clientId]
+        if let merchant = merchantId {
+            request.allHTTPHeaderFields = ["Authorization": "Bearer \(accessToken)", "merchantId": merchant]
         }
         request.httpMethod = "GET"
         

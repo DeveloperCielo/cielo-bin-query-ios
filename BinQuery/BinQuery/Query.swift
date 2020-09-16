@@ -89,8 +89,20 @@ import CieloOAuth
         }
         
         var request = URLRequest(url: url)
+        
+        let sdkName = "CieloBinQuery-iOS"
+        guard let bundle = Bundle(identifier: "com.jnazario.BinQuery") else {
+            completion(nil, "Não foi possível obter o número da versão para registro no servidor.")
+            return
+        }
+        
+        guard let buildVersion = bundle.infoDictionary?["CFBundleShortVersionString"] as? String else {
+            completion(nil, "Não foi possível obter o número da versão para registro no servidor.")
+            return
+        }
+
         if let merchant = merchantId {
-            request.allHTTPHeaderFields = ["Authorization": "Bearer \(accessToken)", "merchantId": merchant]
+            request.allHTTPHeaderFields = ["Authorization": "Bearer \(accessToken)", "merchantId": merchant, "x-sdk-version": "\(sdkName)@\(buildVersion)"]
         }
         request.httpMethod = "GET"
         

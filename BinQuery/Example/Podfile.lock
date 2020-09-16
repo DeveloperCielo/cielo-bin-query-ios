@@ -1,5 +1,5 @@
 PODS:
-  - CieloBinQuery (0.0.1):
+  - CieloBinQuery (0.0.2):
     - CieloOAuth
   - CieloOAuth (1.0.6)
 
@@ -12,9 +12,9 @@ SPEC REPOS:
     - CieloOAuth
 
 SPEC CHECKSUMS:
-  CieloBinQuery: 8b6f4c4e6bfde6045ff0ca2401ef953607575a55
+  CieloBinQuery: 6f2aab3696afc187faa937804bb885519c5ba64a
   CieloOAuth: 49dea63c3bbb70c5de2828812fc4ae502ea5f613
 
 PODFILE CHECKSUM: d93c6e6b19dec4e45290f71348e33fa32339607a
 
-COCOAPODS: 1.9.1
+COCOAPODS: 1.9.3

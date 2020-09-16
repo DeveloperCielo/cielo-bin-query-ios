@@ -7,11 +7,11 @@
 //
 
 @objc public class CieloBinQueryResponse: NSObject, Codable {
-    public var status: String
-    public var provider: String
-    public var cardType: String
-    public var foreignCard: Bool
-    public var corporateCard: Bool
-    public var issuer: String
-    public var issuerCode: String
+    public var status: Int?
+    public var provider: String?
+    public var cardType: String?
+    public var foreignCard: Bool?
+    public var corporateCard: Bool?
+    public var issuer: String?
+    public var issuerCode: String?
 }
