@@ -14,4 +14,5 @@
     public var corporateCard: Bool
     public var issuer: String
     public var issuerCode: String
+    public var prePaid: Bool
 }
